@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark" id="htmlTag">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
   </head>
-  <body>
+  <body class="bg-white dark:bg-gray-900">
     <!-- === This Is Header Section Start === -->
     <header class="md:mx-14 py-2 px-2 md:py-4">
       <nav class="container mx-auto flex items-center justify-between">
@@ -25,7 +25,7 @@
               class="w-10 md:w-fit"
           /></a>
 
-          <p class="text-[8px] md:text-xs">
+          <p class="text-[8px] md:text-xs dark:text-white">
             A Mark Cuban Company <br />
             AI-based Financial Market News Aggregator
           </p>
@@ -43,14 +43,14 @@
           >
             IK
           </div>
-          <button>
+          <button id="switch">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="size-7"
+              class="size-7 dark:stroke-white hover:scale-110 transition duration-300"
             >
               <path
                 stroke-linecap="round"
@@ -66,10 +66,10 @@
 
 
     <!-- === This Is Personalize your news Section Start === -->
-     <section class="bg-[#F0F0F0] px-4 md:px-0 w-full min-h-screen">
+     <section class="bg-[#F0F0F0] dark:bg-gray-700 px-4 md:px-0 w-full min-h-screen">
         <section class="container mx-auto py-8 md:py-12">
             <div class="flex items-center justify-between pb-1 md:pb-2.5 border-b md:border-b-4 border-[#333333] md:mx-48">
-                <h3 class="text-lg md:text-2xl font-semibold uppercase text-[#333333]">Personalize your news</h3>
+                <h3 class="text-lg md:text-2xl font-semibold uppercase text-[#333333] dark:text-white">Personalize your news</h3>
             </div>
 
             <div class="bg-[#FFFFFF] max-w-lg mx-auto mt-6 md:mt-10 p-8">
@@ -89,9 +89,20 @@
     <!-- === This Is Personalize your news Section End === -->
 
     <!-- === This Is Footer Section Start === -->
-    <footer class="text-black text-center pb-5 w-full pt-4">
+    <footer class="text-black dark:text-white text-center pb-5 w-full pt-4">
       All right reserved to TickerAI - 2024
     </footer>
     <!-- === This Is Footer Section End === -->
+     
+
+
+    <!-- === JavaScript Start === -->
+    <script>
+      const htmlTag = document.getElementById("htmlTag");
+      document.getElementById("switch").addEventListener("click", function () {
+        htmlTag.classList.toggle("dark");
+      });
+     </script>
+    <!-- === JavaScript End === -->
   </body>
 </html>
